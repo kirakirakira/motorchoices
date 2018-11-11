@@ -1,0 +1,28 @@
+Type,Manufacturer,Voltage,Piece Price
+AC,ABC Inc.,120,12.5
+AC,MotorsRUs,120,13.75
+AC,MotorsRUs,115,14
+AC,MotorsRUs,115,15.57
+AC,ACDC,220,32.85
+AC,ACDC,220,29.15
+AC,ACDC,230,30.25
+AC,ACDC,230,33
+AC,Motoru,125,15.6
+AC,Motoru,125,15
+AC,Motoru,225,17.89
+DC,ABC Inc.,12,1.5
+DC,ABC Inc.,12.5,2
+DC,ABC Inc.,13.6,3.4
+DC,MotorsRUs,12,1.75
+DC,MotorsRUs,13,2.25
+DC,MotorsRUs,14,1.36
+DC,ACDC,5,0.59
+DC,ACDC,5,1
+DC,ACDC,6,1.25
+DC,ACDC,6,0.75
+DC,Motoru,8,5
+DC,Motoru,8,5.96
+DC,Motoru,8,6.05
+DC,Vroom,12,8.91
+DC,Vroom,12.5,9.1
+DC,Vroom,12.5,10.76

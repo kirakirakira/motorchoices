@@ -1,29 +1,37 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace MotorChoices
 {
     class Program
     {
-        public static void Main(string[] args)
+        private static void Main()
         {
-            DCMotor mtr1 = new DCMotor();
-            mtr1.Current = 5;
-            mtr1.Voltage = 12;
-            mtr1.Manufacturer = "ABC Inc.";
-            mtr1.PiecePrice = 1;
+            // Get current file directory and create file name for data set: MotorData.json
+            string currentDirectory = Directory.GetCurrentDirectory();
+            DirectoryInfo directory = new DirectoryInfo(currentDirectory);
+            var fileName = Path.Combine(directory.FullName, "MotorData.json");
 
-            Console.WriteLine(mtr1.Describe());
-
-            ACMotor mtr2 = new ACMotor();
-            mtr2.Current = 5;
-            mtr2.Voltage = 12;
-            mtr2.PhaseAngle = 60;
-            mtr2.Manufacturer = "ABC Inc.";
-            mtr2.PiecePrice = 1;
-
-            Console.WriteLine(mtr2.Describe());
+            // Deserialize data in json file
+            var motors = DeserializeMotors(fileName);
 
             Console.ReadLine();
+        }
+
+        public static List<Motor> DeserializeMotors(string fileName)
+        {
+            var motors = new List<Motor>();
+            var serializer = new JsonSerializer();
+            using (var reader = new StreamReader(fileName))
+            using (var jsonReader = new JsonTextReader(reader))
+            {
+                motors = serializer.Deserialize<List<Motor>>(jsonReader);
+            }
+            return motors;
         }
     }
 }

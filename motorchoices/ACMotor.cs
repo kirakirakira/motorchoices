@@ -1,15 +1,23 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace MotorChoices
 {
     public class ACMotor: Motor
     {
-        protected int phaseangle;
-        public override int Voltage { get => voltage; set => voltage = value; }
-        public override int Current { get => current; set => current = value; }
-        public int PhaseAngle { get => phaseangle; set => phaseangle = value; }
+        protected double phaseangle;
+        [JsonProperty(PropertyName = "Voltage")]
+        public override double Voltage { get => voltage; set => voltage = value; }
+        public override double Current { get => current; set => current = value; }
+        public double PhaseAngle { get => phaseangle; set => phaseangle = value; }
+        [JsonProperty(PropertyName = "Manufacturer")]
         public override string Manufacturer { get => manufacturer; set => manufacturer = value; }
-        public override int PiecePrice { get => pieceprice; set => pieceprice = value; }
+        [JsonProperty(PropertyName = "Piece Price")]
+        public override double PiecePrice { get => pieceprice; set => pieceprice = value; }
+        public override string Type { get => type; set => type = value; }
 
         public override double CalculatePower() =>(Voltage / Math.Sqrt(2)) * (Current / Math.Sqrt(2)) * Math.Cos(PhaseAngle*(Math.PI/180));
 

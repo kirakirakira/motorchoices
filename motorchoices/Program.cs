@@ -19,10 +19,37 @@ namespace MotorChoices
             // Deserialize data in json file
             var acmotors = DeserializeMotors(fileName);
 
-            // Display current motors
-            DisplayMotors(acmotors);
+            // Display main menu
+            DisplayMainMenu();
+
+            // Get user input
+            Console.WriteLine("Enter your selection: ");
+            var userInput = Console.ReadLine();
+
+            if (userInput == "1")
+            {
+                // Display current motors
+                DisplayMotors(acmotors);
+            }
+            else if (userInput == "2")
+            {
+                // Ask user which motor to add
+                Console.WriteLine("Please enter the motor id that you'd like to add to the database: ");
+                var motorId = Console.ReadLine();
+                AddToFavoriteList(FindMotorObjectById());
+            }
 
             Console.ReadLine();
+        }
+
+        private static object FindMotorObjectById()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void AddToFavoriteList(object findMotorObjectById)
+        {
+            throw new NotImplementedException();
         }
 
         public static List<ACMotor> DeserializeMotors(string fileName)
@@ -57,6 +84,27 @@ namespace MotorChoices
                 Console.ReadLine();
                 overallIndex += pageIncrement;
             }
+        }
+
+        public static void DisplayMainMenu()
+        {
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("--------MOTOR DB & POWER CALCULATOR -------");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("Options are:");
+            Console.WriteLine("1: Display all motors");
+            Console.WriteLine("2: Display favorites list");
+        }
+
+        public static void DisplayMotorMenu()
+        {
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("--------MOTOR SELECTION & CALCULATOR ------");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("Options are:");
+            Console.WriteLine("1: Calculate power");
+            Console.WriteLine("2: Add motor to favorite list by id #");
+            Console.WriteLine("3: Remove motor from favorite list by id#");
         }
     }
 }

@@ -14,24 +14,49 @@ namespace MotorChoices
             // Get current file directory and create file name for data set: MotorData.json
             string currentDirectory = Directory.GetCurrentDirectory();
             DirectoryInfo directory = new DirectoryInfo(currentDirectory);
-            var fileName = Path.Combine(directory.FullName, "MotorData.json");
+            var fileName = Path.Combine(directory.FullName, "ACMotorData.json");
 
             // Deserialize data in json file
-            var motors = DeserializeMotors(fileName);
+            var acmotors = DeserializeMotors(fileName);
+
+            // Display current motors
+            DisplayMotors(acmotors);
 
             Console.ReadLine();
         }
 
-        public static List<Motor> DeserializeMotors(string fileName)
+        public static List<ACMotor> DeserializeMotors(string fileName)
         {
-            var motors = new List<Motor>();
+            var acmotors = new List<ACMotor>();
             var serializer = new JsonSerializer();
             using (var reader = new StreamReader(fileName))
             using (var jsonReader = new JsonTextReader(reader))
             {
-                motors = serializer.Deserialize<List<Motor>>(jsonReader);
+                acmotors = serializer.Deserialize<List<ACMotor>>(jsonReader);
             }
-            return motors;
+            return acmotors;
+        }
+
+        public static void DisplayMotors(List<ACMotor> acmotors)
+        {
+            Console.WriteLine("These are the current motors in our database: ");
+
+            int overallIndex = 0;
+            int pageIncrement = 3;
+            while (overallIndex < acmotors.Count)
+            {
+                for (int i = overallIndex; i < overallIndex+pageIncrement; i++)
+                {
+                    if (i < acmotors.Count)
+                    {
+                        Console.WriteLine(acmotors[i].Describe());
+                    }
+
+                }
+                Console.WriteLine("Press enter to display more.");
+                Console.ReadLine();
+                overallIndex += pageIncrement;
+            }
         }
     }
 }

@@ -9,6 +9,9 @@ namespace MotorChoices
     public class ACMotor: Motor
     {
         protected double phaseangle;
+
+        [JsonProperty(PropertyName = "ID")]
+        public override int ID { get => id; set => id = value; }
         [JsonProperty(PropertyName = "Voltage")]
         public override double Voltage { get => voltage; set => voltage = value; }
         public override double Current { get => current; set => current = value; }
@@ -25,14 +28,14 @@ namespace MotorChoices
         {
             return string.Format(
                 @"
-                AC Motor
-                Manufacturer: {0}
-                Piece Price: {1}
-                Power (Watts): {2}
-                Voltage (V): {3}
-                Current (A): {4}
-                Phase Angle (deg): {5}",
-            manufacturer, pieceprice, this.CalculatePower(), voltage, current, phaseangle);
+                #{0} - AC Motor
+                Manufacturer: {1}
+                Piece Price: {2}
+                Power (Watts): {3}
+                Voltage (V): {4}
+                Current (A): {5}
+                Phase Angle (deg): {6}",
+            id, manufacturer, pieceprice, this.CalculatePower(), voltage, current, phaseangle);
         }
     }
 }

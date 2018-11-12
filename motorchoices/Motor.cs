@@ -8,6 +8,7 @@ namespace MotorChoices
 {
     public abstract class Motor
     {
+        protected int id;
         protected double voltage;
         protected double current;
         protected string manufacturer;
@@ -15,6 +16,7 @@ namespace MotorChoices
         protected double pieceprice;
         protected string type;
 
+        public abstract int ID { get; set; }
         public abstract double Voltage { get; set; }
         public abstract double Current { get; set; }
         public abstract string Manufacturer { get; set; }

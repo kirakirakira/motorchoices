@@ -8,6 +8,8 @@ namespace MotorChoices
 {
     public class DCMotor: Motor
     {
+        [JsonProperty(PropertyName = "ID")]
+        public override int ID { get => id; set => id = value; }
         [JsonProperty(PropertyName = "Voltage")]
         public override double Voltage { get => voltage; set => voltage = value; }
         public override double Current { get => current; set => current = value; }
@@ -26,13 +28,13 @@ namespace MotorChoices
         {
             return string.Format(
                 @"
-                DC Motor
-                Manufacturer: {0}
-                Piece Price: {1}
-                Power (Watts): {2}
-                Voltage (V): {3}
-                Current (A): {4}",
-            manufacturer, pieceprice, this.CalculatePower(), voltage, current);
+                #{0} - DC Motor
+                Manufacturer: {1}
+                Piece Price: {2}
+                Power (Watts): {3}
+                Voltage (V): {4}
+                Current (A): {5}",
+            id, manufacturer, pieceprice, this.CalculatePower(), voltage, current);
         }
     }
 }

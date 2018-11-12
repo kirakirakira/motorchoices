@@ -42,10 +42,13 @@
     <Compile Include="ACMotor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MotorData.json">
+    <None Include="ACMotorData.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="DCMotorData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

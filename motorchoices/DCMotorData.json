@@ -1,164 +1,112 @@
-﻿[
-  {
-    "Type": "AC",
-    "Manufacturer": "ABC Inc.",
-    "Voltage": 120,
-    "Piece Price": 12.5
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "MotorsRUs",
-    "Voltage": 120,
-    "Piece Price": 13.75
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "MotorsRUs",
-    "Voltage": 115,
-    "Piece Price": 14
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "MotorsRUs",
-    "Voltage": 115,
-    "Piece Price": 15.57
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "ACDC",
-    "Voltage": 220,
-    "Piece Price": 32.85
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "ACDC",
-    "Voltage": 220,
-    "Piece Price": 29.15
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "ACDC",
-    "Voltage": 230,
-    "Piece Price": 30.25
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "ACDC",
-    "Voltage": 230,
-    "Piece Price": 33
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "Motoru",
-    "Voltage": 125,
-    "Piece Price": 15.6
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "Motoru",
-    "Voltage": 125,
-    "Piece Price": 15
-  },
-  {
-    "Type": "AC",
-    "Manufacturer": "Motoru",
-    "Voltage": 225,
-    "Piece Price": 17.89
-  },
-  {
+﻿  [{
+    "ID": 1,
     "Type": "DC",
     "Manufacturer": "ABC Inc.",
     "Voltage": 12,
     "Piece Price": 1.5
   },
   {
+    "ID": 2,
     "Type": "DC",
     "Manufacturer": "ABC Inc.",
     "Voltage": 12.5,
     "Piece Price": 2
   },
   {
+    "ID": 3,
     "Type": "DC",
     "Manufacturer": "ABC Inc.",
     "Voltage": 13.6,
     "Piece Price": 3.4
   },
   {
+    "ID": 4,
     "Type": "DC",
     "Manufacturer": "MotorsRUs",
     "Voltage": 12,
     "Piece Price": 1.75
   },
   {
+    "ID": 5,
     "Type": "DC",
     "Manufacturer": "MotorsRUs",
     "Voltage": 13,
     "Piece Price": 2.25
   },
   {
+    "ID": 6,
     "Type": "DC",
     "Manufacturer": "MotorsRUs",
     "Voltage": 14,
     "Piece Price": 1.36
   },
   {
+    "ID": 7,
     "Type": "DC",
     "Manufacturer": "ACDC",
     "Voltage": 5,
     "Piece Price": 0.59
   },
   {
+    "ID": 8,
     "Type": "DC",
     "Manufacturer": "ACDC",
     "Voltage": 5,
     "Piece Price": 1
   },
   {
+    "ID": 9,
     "Type": "DC",
     "Manufacturer": "ACDC",
     "Voltage": 6,
     "Piece Price": 1.25
   },
   {
+    "ID": 10,
     "Type": "DC",
     "Manufacturer": "ACDC",
     "Voltage": 6,
     "Piece Price": 0.75
   },
   {
+    "ID": 11,
     "Type": "DC",
     "Manufacturer": "Motoru",
     "Voltage": 8,
     "Piece Price": 5
   },
   {
+    "ID": 12,
     "Type": "DC",
     "Manufacturer": "Motoru",
     "Voltage": 8,
     "Piece Price": 5.96
   },
   {
+    "ID": 13,
     "Type": "DC",
     "Manufacturer": "Motoru",
     "Voltage": 8,
     "Piece Price": 6.05
   },
   {
+    "ID": 14,
     "Type": "DC",
     "Manufacturer": "Vroom",
     "Voltage": 12,
     "Piece Price": 8.91
   },
   {
+    "ID": 15,
     "Type": "DC",
     "Manufacturer": "Vroom",
     "Voltage": 12.5,
     "Piece Price": 9.1
   },
   {
+    "ID": 16,
     "Type": "DC",
     "Manufacturer": "Vroom",
     "Voltage": 12.5,
     "Piece Price": 10.76
-  }
-]
+  }]
